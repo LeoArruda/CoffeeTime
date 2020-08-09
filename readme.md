@@ -20,8 +20,9 @@ That will populate 16 stores with 3 authors and 41 reviews. The logins for the a
 
 |Name|Email (login)|Password|
 |---|---|---|
-|Wes Bos|wes@example.com|wes|
-|Debbie Downer|debbie@example.com|debbie|
-|Beau|beau@example.com|beau|
+|Leo Arruda|leo@example.com|leo|
+|Wesley Bross|wes@example.com|wes|
+|Debbie Combs|debbie@example.com|debbie|
+|Theo|theo@example.com|theo|
 
 
