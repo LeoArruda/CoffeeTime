@@ -61,3 +61,5 @@ exports.updateAccount = async (req, res) => {
     req.flash('success', 'Updated the profile!');
     res.redirect('back');
   };
+
+  
