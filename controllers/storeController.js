@@ -52,7 +52,7 @@ exports.createStore = async (req, res) => {
 
 exports.getStores = async (req, res) => {
   const page = req.params.page || 1;
-  const limit = 4;
+  const limit = 6;
   const skip = (page * limit) - limit;
 
   // 1. Query the database for a list of all stores
@@ -63,8 +63,9 @@ exports.getStores = async (req, res) => {
     .sort({ created: 'desc' });
 
   const countPromise = Store.count();
-
+  // Awaiting  all queries to return
   const [stores, count] = await Promise.all([storesPromise, countPromise]);
+
   const pages = Math.ceil(count / limit);
   if (!stores.length && skip) {
     req.flash('info', `Hey! You asked for page ${page}. But that doesn't exist. So I put you on page ${pages}`);
